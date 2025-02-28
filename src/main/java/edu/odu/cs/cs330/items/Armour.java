@@ -205,9 +205,13 @@ public class Armour extends Item {
     @Override
     public void read(Scanner snr)
     {
-        super.name   = snr.next();
-
-        // Complete this method
+        super.name      	= snr.next();
+	this.material 		= snr.next();
+	this.durability		= snr.nextInt();
+	this.defense		= snr.nextInt();
+	this.modifier		= snr.next();
+	this.modiferLevel     	= snr.nextInt();
+	this.element		= snr.next();
     }
 
     /**
@@ -225,7 +229,7 @@ public class Armour extends Item {
      */
     @Override
     public String toString()
-    {
+   {
         return "Implement This Function";
     }
 }
