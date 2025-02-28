@@ -230,8 +230,22 @@ public class Armour extends Item {
     @Override
     public String toString()
    {
-        return "Implement This Function";
-    }
+   	String summaryLine = String.format(
+            " Nme: %s%n Dur: %d%n Def: %d%n Mtl: %s%n Mdr: %s (Lvl %d)%n Emt: %s%n",
+	   	this.getName(),
+	      	this.getDurability(),
+		this.getDefense(),
+		this.getMaterial(),
+		this.getModifier(),
+		this.getModifierLevel(),
+		this.getElement()
+        );
+
+        StringBuilder strBld = new StringBuilder();
+        strBld.append(summaryLine);
+
+        return strBld.toString();     
+   }
 }
 
 
