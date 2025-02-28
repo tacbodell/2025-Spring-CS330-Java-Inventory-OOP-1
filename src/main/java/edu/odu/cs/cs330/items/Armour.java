@@ -65,6 +65,14 @@ public class Armour extends Item {
     public Armour(Armour src)
     {
         // Set and/or copy data members for *this* object based on *src*.
+        this.setDurability(src.getDurability());
+        this.setDefense(src.getDefense());
+        this.setMaterial(src.getMaterial());
+        this.setModifier(src.getModifier());
+        this.setModifierLevel(src.getModifierLevel());
+        this.setElement(src.getElement());
+        this.setName(src.getName());
+        this.stackable = src.isStackable();
     }
 
     /**
