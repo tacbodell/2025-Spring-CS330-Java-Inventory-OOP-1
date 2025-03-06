@@ -110,6 +110,16 @@ public class Consumable extends Item {
     @Override
     public String toString()
     {
-        return "Implement this function";
+        String summaryLine = String.format(
+            "  Nme: %s%n  Eft: %s%n  Use: %d%n",
+                this.getName(),
+                this.getEffect(),
+                this.getNumberOfUses()
+        );
+
+        StringBuilder strBld = new StringBuilder();
+        strBld.append(summaryLine);
+
+        return strBld.toString();
     }
 }
